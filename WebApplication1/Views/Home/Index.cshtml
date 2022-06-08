@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<div class="well-sm">
+    <div class="form-horizontal">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+        // an encoding type that allows files to be sent through a POST.
+       
+        {
+            <h2>Option Selection</h2>
+
+            <div>
+                <input type="radio" name="document" value="Documents" />
+                <label for="document">Document</label><br />
+                <input type="radio" name="image" value="Images" />
+                <label for="image">Image</label><br />
+                <input type="radio" name="video" value="Videos" />
+                <label for="video">Video</label><br />
+            </div>
+            <br />
+            <div><input type="file" name="files" /></div>
+            <br />
+            <div><input type="submit" value="Submit" /></div>
+        }
+    </div>
+    <br />
+</div>
